@@ -8,9 +8,9 @@
 import UIKit
 import CoreData
 
-protocol AddNoteDBDelegate: AnyObject {
-    func addNote()
-}
+//protocol AddNoteDBDelegate: AnyObject {
+//    func addNote()
+//}
 
 protocol CoreDataHelperProtocol {
     func addNote(text: String)
@@ -24,7 +24,7 @@ class CoreDataHelper: CoreDataHelperProtocol {
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static let persistentContainer = appDelegate.persistentContainer
     let managedContext = persistentContainer.viewContext
-    weak var delegate: AddNoteDBDelegate?
+    //weak var delegate: AddNoteDBDelegate?
     
     func addNote(text: String) {
         let dbNote = NoteMO(context: managedContext)
@@ -46,7 +46,7 @@ class CoreDataHelper: CoreDataHelperProtocol {
                 print("Cloud not save \(error)")
             }
         }
-        delegate?.addNote()
+        //delegate?.addNote()
     }
     
     func deleteNote(note: Note) {

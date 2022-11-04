@@ -7,23 +7,6 @@
 
 import Foundation
 
-enum SortingNotesType {
-    case byName
-    case byDate
-}
-
-protocol NotesListViewModelType {
-    var sortType: SortingNotesType { get }
-    var notes: [Note] { get set }
-    var dbManager: CoreDataHelperProtocol { get set }
-    var isSearching: Bool { get set }
-    
-    func fetchNote()
-    func deleteNote(indexPath: IndexPath)
-    func getNotes() -> [Note]
-    func searchNote(searchText: String)
-    func sortNotes(by: SortingNotesType)
-}
 
 class NotesListViewModel: NotesListViewModelType {
     var sortType: SortingNotesType = .byDate
@@ -64,12 +47,12 @@ class NotesListViewModel: NotesListViewModelType {
     }
 }
 
-// MARK: - AddNoteDelegate
-extension NotesListViewModel: AddNoteDBDelegate {
-    func addNote() {
-        fetchNote()
-    }
-}
+//// MARK: - AddNoteDelegate
+//extension NotesListViewModel: AddNoteDBDelegate {
+//    func addNote() {
+//        fetchNote()
+//    }
+//}
 
 // MARK: - Sorting notes
 extension NotesListViewModel {

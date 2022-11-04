@@ -28,9 +28,11 @@
 		365BD12928EB51F3001EF1C8 /* NoteMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365BD12728EB51F3001EF1C8 /* NoteMO+CoreDataProperties.swift */; };
 		365BD12B28EB528F001EF1C8 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365BD12A28EB528F001EF1C8 /* CoreDataHelper.swift */; };
 		365BD12D28EB5B51001EF1C8 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365BD12C28EB5B51001EF1C8 /* NoteViewController.swift */; };
-		365BD12F28EB5C17001EF1C8 /* NoteModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365BD12E28EB5C17001EF1C8 /* NoteModelView.swift */; };
+		365BD12F28EB5C17001EF1C8 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365BD12E28EB5C17001EF1C8 /* NoteViewModel.swift */; };
 		365BD13128EB5D73001EF1C8 /* NoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365BD13028EB5D73001EF1C8 /* NoteViewController.xib */; };
 		36E7E7ED29156C5400C027B8 /* NoteViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7EC29156C5400C027B8 /* NoteViewModelType.swift */; };
+		36E7E7F229156DD400C027B8 /* NotesListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7F129156DD400C027B8 /* NotesListViewModelType.swift */; };
+		36E7E7F529156E4F00C027B8 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7F429156E4F00C027B8 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,9 +59,11 @@
 		365BD12728EB51F3001EF1C8 /* NoteMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		365BD12A28EB528F001EF1C8 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		365BD12C28EB5B51001EF1C8 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
-		365BD12E28EB5C17001EF1C8 /* NoteModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModelView.swift; sourceTree = "<group>"; };
+		365BD12E28EB5C17001EF1C8 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		365BD13028EB5D73001EF1C8 /* NoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteViewController.xib; sourceTree = "<group>"; };
 		36E7E7EC29156C5400C027B8 /* NoteViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModelType.swift; sourceTree = "<group>"; };
+		36E7E7F129156DD400C027B8 /* NotesListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewModelType.swift; sourceTree = "<group>"; };
+		36E7E7F429156E4F00C027B8 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 		365BD0FE28E5E8D8001EF1C8 /* LazyNotesApp-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				36E7E7F329156E3700C027B8 /* Observable */,
 				365BD13928EBB4A9001EF1C8 /* Common */,
 				365BD13728EBB3F6001EF1C8 /* Resources */,
 				365BD13628EBB3DC001EF1C8 /* Models */,
@@ -123,19 +128,19 @@
 			isa = PBXGroup;
 			children = (
 				365BD13828EBB426001EF1C8 /* NotesListScreen */,
-				365BD13328EBB357001EF1C8 /* AddNoteScreen */,
+				365BD13328EBB357001EF1C8 /* NoteScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		365BD13328EBB357001EF1C8 /* AddNoteScreen */ = {
+		365BD13328EBB357001EF1C8 /* NoteScreen */ = {
 			isa = PBXGroup;
 			children = (
-				36E7E7EE29156C5900C027B8 /* New Group1 */,
-				365BD12E28EB5C17001EF1C8 /* NoteModelView.swift */,
-				36E7E7EC29156C5400C027B8 /* NoteViewModelType.swift */,
+				36E7E7EF29156D5F00C027B8 /* NoteViewModelType */,
+				36E7E7EE29156C5900C027B8 /* NoteVC */,
+				365BD12E28EB5C17001EF1C8 /* NoteViewModel.swift */,
 			);
-			path = AddNoteScreen;
+			path = NoteScreen;
 			sourceTree = "<group>";
 		};
 		365BD13428EBB396001EF1C8 /* Managers */ = {
@@ -181,6 +186,7 @@
 		365BD13828EBB426001EF1C8 /* NotesListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				36E7E7F029156DA700C027B8 /* NotesListViewModelType */,
 				365BD13C28EBB54E001EF1C8 /* Views */,
 				365BD13B28EBB50F001EF1C8 /* ViewModel */,
 			);
@@ -232,13 +238,37 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
-		36E7E7EE29156C5900C027B8 /* New Group1 */ = {
+		36E7E7EE29156C5900C027B8 /* NoteVC */ = {
 			isa = PBXGroup;
 			children = (
 				365BD12C28EB5B51001EF1C8 /* NoteViewController.swift */,
 				365BD13028EB5D73001EF1C8 /* NoteViewController.xib */,
 			);
-			path = "New Group1";
+			path = NoteVC;
+			sourceTree = "<group>";
+		};
+		36E7E7EF29156D5F00C027B8 /* NoteViewModelType */ = {
+			isa = PBXGroup;
+			children = (
+				36E7E7EC29156C5400C027B8 /* NoteViewModelType.swift */,
+			);
+			path = NoteViewModelType;
+			sourceTree = "<group>";
+		};
+		36E7E7F029156DA700C027B8 /* NotesListViewModelType */ = {
+			isa = PBXGroup;
+			children = (
+				36E7E7F129156DD400C027B8 /* NotesListViewModelType.swift */,
+			);
+			path = NotesListViewModelType;
+			sourceTree = "<group>";
+		};
+		36E7E7F329156E3700C027B8 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				36E7E7F429156E4F00C027B8 /* Observable.swift */,
+			);
+			path = Observable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,10 +350,12 @@
 				365BD11A28E5E96F001EF1C8 /* NotesListViewController.swift in Sources */,
 				36597A32290356BA00EFCE05 /* User.swift in Sources */,
 				365BD12528E5F435001EF1C8 /* Note.swift in Sources */,
+				36E7E7F229156DD400C027B8 /* NotesListViewModelType.swift in Sources */,
 				365BD10028E5E8D8001EF1C8 /* AppDelegate.swift in Sources */,
 				365BD11E28E5EBD7001EF1C8 /* NoteTableViewCell.swift in Sources */,
 				36374D8628F866FA002698CF /* Extension+NoteViewController.swift in Sources */,
-				365BD12F28EB5C17001EF1C8 /* NoteModelView.swift in Sources */,
+				36E7E7F529156E4F00C027B8 /* Observable.swift in Sources */,
+				365BD12F28EB5C17001EF1C8 /* NoteViewModel.swift in Sources */,
 				363532D128F37F8B0001E3AE /* SortNotesAlertController.swift in Sources */,
 				365BD10228E5E8D8001EF1C8 /* SceneDelegate.swift in Sources */,
 				365BD12D28EB5B51001EF1C8 /* NoteViewController.swift in Sources */,

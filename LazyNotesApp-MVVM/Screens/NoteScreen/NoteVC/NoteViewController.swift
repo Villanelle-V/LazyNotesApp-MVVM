@@ -49,12 +49,13 @@ extension NoteViewController {
     }
     
     @objc func shareButtonTapped(sender: UIBarButtonItem) {
-        guard let note = viewModel.currentNote else { return }
+        //guard let note = viewModel.currentNote else { return }
 
-        let shareController = UIActivityViewController(activityItems: [note], applicationActivities: nil)
-        shareController.popoverPresentationController?.sourceView = self.textView
-        present(shareController, animated: true, completion: nil)
-        }
+        guard let note = textView.text else { return }
+            let shareController = UIActivityViewController(activityItems: [note], applicationActivities: nil)
+            shareController.popoverPresentationController?.sourceView = self.textView
+            present(shareController, animated: true, completion: nil)
+    }
 }
 
 extension NoteViewController {
@@ -64,6 +65,10 @@ extension NoteViewController {
         textView.layer.borderWidth = 0.5
         textView.layer.cornerRadius = 5
         textView.delegate = self
-        textView.text = viewModel.currentNote
+        //textView.text = viewModel.currentNote
+        viewModel.currentNote.bind { [unowned self] in
+            guard let string = $0 else { return }
+            textView.text = string
+        }
     }
 }

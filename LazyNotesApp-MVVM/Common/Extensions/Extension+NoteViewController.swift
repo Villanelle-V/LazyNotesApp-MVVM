@@ -51,9 +51,11 @@ extension NoteViewController: UITextViewDelegate {
     
     func loadingContent(with text: String) {
         if state == .create {
-            viewModel.currentNote = ""
+            //viewModel.currentNote = ""
+            viewModel.currentNote.value = ""
         } else {
-            viewModel.currentNote = text
+            //viewModel.currentNote = text
+            viewModel.currentNote.value = text
         }
     }
 }

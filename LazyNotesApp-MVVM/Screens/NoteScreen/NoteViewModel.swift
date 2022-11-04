@@ -8,25 +8,21 @@
 import Foundation
 import CoreData
 
-protocol NoteModelViewType {
-    var dbManager: CoreDataHelperProtocol { get }
-    var currentNote: String? { get set }
-    
-    func addText(text: String)
-    func addNote()
-    func saveNote()
-}
 
 class NoteModelView: NoteModelViewType {
     var dbManager: CoreDataHelperProtocol = CoreDataHelper()
-    var currentNote: String?
+    //var currentNote: String?
+    var currentNote: Observable<String?> = Observable(nil)
     
     func addText(text: String) {
-        currentNote = text
+        //currentNote = text
+        currentNote.value = text
     }
     
     func addNote() {
-        guard let note = currentNote else { return}
+//        guard let note = currentNote else { return }
+//        dbManager.addNote(text: note)
+        guard let note = currentNote.value else { return }
         dbManager.addNote(text: note)
         saveNote()
     }
