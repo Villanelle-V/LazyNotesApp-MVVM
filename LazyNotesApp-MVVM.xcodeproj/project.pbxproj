@@ -30,6 +30,7 @@
 		365BD12D28EB5B51001EF1C8 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365BD12C28EB5B51001EF1C8 /* NoteViewController.swift */; };
 		365BD12F28EB5C17001EF1C8 /* NoteModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365BD12E28EB5C17001EF1C8 /* NoteModelView.swift */; };
 		365BD13128EB5D73001EF1C8 /* NoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365BD13028EB5D73001EF1C8 /* NoteViewController.xib */; };
+		36E7E7ED29156C5400C027B8 /* NoteViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E7E7EC29156C5400C027B8 /* NoteViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		365BD12C28EB5B51001EF1C8 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		365BD12E28EB5C17001EF1C8 /* NoteModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModelView.swift; sourceTree = "<group>"; };
 		365BD13028EB5D73001EF1C8 /* NoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteViewController.xib; sourceTree = "<group>"; };
+		36E7E7EC29156C5400C027B8 /* NoteViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,9 +131,9 @@
 		365BD13328EBB357001EF1C8 /* AddNoteScreen */ = {
 			isa = PBXGroup;
 			children = (
-				365BD12C28EB5B51001EF1C8 /* NoteViewController.swift */,
-				365BD13028EB5D73001EF1C8 /* NoteViewController.xib */,
+				36E7E7EE29156C5900C027B8 /* New Group1 */,
 				365BD12E28EB5C17001EF1C8 /* NoteModelView.swift */,
+				36E7E7EC29156C5400C027B8 /* NoteViewModelType.swift */,
 			);
 			path = AddNoteScreen;
 			sourceTree = "<group>";
@@ -230,6 +232,15 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		36E7E7EE29156C5900C027B8 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				365BD12C28EB5B51001EF1C8 /* NoteViewController.swift */,
+				365BD13028EB5D73001EF1C8 /* NoteViewController.xib */,
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,6 +330,7 @@
 				365BD12B28EB528F001EF1C8 /* CoreDataHelper.swift in Sources */,
 				365BD12328E5F3EB001EF1C8 /* NotesListViewModel.swift in Sources */,
 				365BD12928EB51F3001EF1C8 /* NoteMO+CoreDataProperties.swift in Sources */,
+				36E7E7ED29156C5400C027B8 /* NoteViewModelType.swift in Sources */,
 				3642A7F029073A67008D6F25 /* UserMO+CoreDataProperties.swift in Sources */,
 				3642A7EF29073A67008D6F25 /* UserMO+CoreDataClass.swift in Sources */,
 			);
